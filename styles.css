@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* desktop first */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-back {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #020166;
+  color: #f7f7f9;
+  width: 100%;
+  height: 47px;
+}
+
+.nav-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 0 110px 0 106px;
+}
+
+.logo-img {
+  width: 120px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.buttons-list {
+  display: flex;
+}
+
+.nav-bar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.nav-bar-button:hover {
+  background-color: #94d97e;
+  color: #000000;
+  cursor: pointer;
+}
+
+.search-part {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.search-part-size {
+  width: 300px;
+  height: 27px;
+}
+
+.input-search {
+  width: 200px;
+  height: 20px;
+  background-color: #f7f7f9;
+  border: 1px solid #02016680;
+  border-radius: 6px;
+}
+
+.button-search {
+  width: 70px;
+  height: 20px;
+  background-color: #373299;
+  font-size: 12px;
+  font-weight: 300;
+  color: #f7f7f9;
+  border: 0px solid;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.grid-space {
+  display: flex;
+  justify-content: center;
+  height: 430px;
+  width: 100%;
+}
+
+.poke-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 470px;
+}
+
+.pokemon {
+  height: 135px;
+  width: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #373299;
+  font-weight: 400;
+  font-size: 12px;
+  box-shadow: 2px 2px 4px 0px #00000026;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  border: 1px;
+  cursor: pointer;
+}
+
+.poke-id {
+  margin-right: 50px;
+}
+
+.poke-img {
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+}
+
+.load-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.load-button {
+  background-color: transparent;
+  margin-top: 20px;
+  height: 22px;
+  width: 107px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #373299;
+  border-radius: 5px;
+  border: 1px solid #373299;
+  cursor: pointer;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-frame {
+  margin: 10% auto;
+  width: 70%;
+
+  color: #f7f7f9;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #f7f7f9;
+  color: #373299;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.17), 0 5px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modal-right-part {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+}
+
+.heart-button {
+  display: flex;
+  height: 20px;
+  width: 18px;
+}
+
+.heart-button:hover {
+  cursor: pointer;
+}
+
+.description-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  width: 350px;
+}
+
+.poke-types-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.poke-type {
+  width: 50%;
+}
+
+.stats-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.vl {
+  border-left: 1px solid #d7d7d7;
+  height: 260px;
+}
+
+.modal-left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-poke-id {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.modal-poke-img {
+  width: 140px;
+  height: 140px;
+  margin-left: 45px;
+}
+
+.modal-poke-name {
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+  margin-left: 15px;
+}
+
+.poke-type {
+  height: 35px;
+  width: 100px;
+  border-style: none;
+  border-radius: 8px;
+  color: #f7f7f9;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#Grass {
+  background-color: #7ac74c;
+}
+
+#Poison {
+  background-color: #aa4bb1;
+}
+
+.vector {
+  height: 7px;
+  width: 15px;
+}
+
+.stats-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.closeBtn {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  cursor: pointer;
+}
+
+/* mobile style */
+@media (max-width: 325px) {
+  .nav-bar-back {
+    background-color: transparent;
+    height: 60px;
+    position: static;
+  }
+
+  .logo-img {
+    width: 130px;
+    height: 47px;
+    margin-top: 25px;
+  }
+
+  .buttons-list {
+    display: none;
+  }
+
+  .nav-bar-button {
+    display: none;
+  }
+
+  .search-part-size {
+    margin-left: 25px;
+    gap: 10px;
+  }
+
+  .input-search {
+    height: 22px;
+  }
+
+  .button-search {
+    height: 22px;
+  }
+
+  .pokemon {
+    width: 180px;
+    height: 200px;
+  }
+
+  .poke-img {
+    width: 85px;
+    height: 80px;
+    margin: 35px;
+  }
+
+  .poke-id {
+    margin-right: 110px;
+  }
+
+  .load-button {
+    display: none;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-poke-id {
+    font-size: 14px;
+  }
+
+  .modal-left-part {
+    width: 100%;
+  }
+
+  .modal-poke-img {
+    width: 100px;
+    height: 100px;
+    margin-left: 25px;
+  }
+
+  .modal-poke-name {
+    font-size: 20px;
+    margin-left: 2px;
+  }
+
+  .poke-type {
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .poke-types-container {
+    margin: 0;
+  }
+
+  .vl {
+    border-left: none;
+    border-top: 1px solid #d7d7d7;
+    width: 160px;
+    height: 0px;
+    margin-top: 10px;
+  }
+
+  .modal-right-part {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .description {
+    width: 90%;
+    text-align: center;
+  }
+
+  .description-div {
+    align-items: center;
+  }
+
+  .stats-div {
+    align-items: center;
+  }
+
+  .stats-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heart-button {
+    display: none;
+  }
+}

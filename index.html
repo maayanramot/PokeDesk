@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div id="simpleModal" class="modal">
+      <div class="modal-frame">
+        <span class="closeBtn"
+          ><img class="vector" src="./assets/Vector.svg" /> Home Page</span
+        >
+        <div class="modal-content">
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="nav-bar-back">
+        <div class="nav-bar-content">
+          <div class="logo">
+            <img class="logo-img" src="./assets/logo.svg" />
+          </div>
+          <div class="buttons-list">
+            <div class="nav-bar-button">Home</div>
+            <div class="nav-bar-button">Favorite</div>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="search-part">
+          <div class="search-part-size">
+            <input class="input-search" type="text" placeholder="" />
+            <button class="button-search" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+      <div class="grid-space">
+        <div class="poke-grid"></div>
+      </div>
+      <div class="load-button-container">
+        <button class="load-button" type="submit">Load More...</button>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
