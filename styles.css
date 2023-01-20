@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* desktop first */
+
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* navber */
 .nav-bar-back {
   position: sticky;
   top: 0;
@@ -52,6 +54,17 @@
   cursor: pointer;
 }
 
+.homeBtn {
+  background-color: #94d97e;
+  color: #000000;
+}
+
+.favoriteBtn {
+  background-color: #94d97e;
+  color: #000000;
+}
+
+/* search */
 .search-part {
   width: 100%;
   display: flex;
@@ -85,14 +98,15 @@
   cursor: pointer;
 }
 
-.grid-space {
+/* grid */
+.grid-container {
   display: flex;
   justify-content: center;
   height: 430px;
   width: 100%;
 }
 
-.poke-grid {
+.grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -100,7 +114,11 @@
   width: 470px;
 }
 
-.pokemon {
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.card {
   height: 135px;
   width: 105px;
   display: flex;
@@ -118,16 +136,17 @@
   cursor: pointer;
 }
 
-.poke-id {
+.id {
   margin-right: 50px;
 }
 
-.poke-img {
+.image {
   height: 70px;
   width: 70px;
   margin: 10px;
 }
 
+/* load button */
 .load-button-container {
   display: flex;
   justify-content: center;
@@ -184,23 +203,19 @@
   gap: 65px;
 }
 
-.favorite-button {
+.heart-button {
+  display: flex;
   background-color: transparent;
   border: none;
   height: fit-content;
-}
-
-.heart-button {
-  display: flex;
-  height: 20px;
-  width: 18px;
+  margin-left: 0 auto;
 }
 
 .heart-button:hover {
   cursor: pointer;
 }
 
-.description-div {
+.description-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -216,6 +231,7 @@
   font-weight: 400;
   line-height: 21px;
   width: 350px;
+  flex-wrap: wrap;
 }
 
 .poke-types-container {
@@ -273,14 +289,6 @@
   font-weight: 400;
 }
 
-#Grass {
-  background-color: #7ac74c;
-}
-
-#Poison {
-  background-color: #aa4bb1;
-}
-
 .vector {
   height: 7px;
   width: 15px;
@@ -311,12 +319,69 @@
   cursor: pointer;
 }
 
+#Normal {
+  background-color: #a8a77a;
+}
+#Fire {
+  background-color: #ee8130;
+}
+#Water {
+  background-color: #6390f0;
+}
+#Electric {
+  background-color: #f7d02c;
+}
+#Grass {
+  background-color: #7ac74c;
+}
+#Ice {
+  background-color: #96d9d6;
+}
+#Fighting {
+  background-color: #c22e28;
+}
+#Poison {
+  background-color: #a33ea1;
+}
+#Ground {
+  background-color: #e2bf65;
+}
+#Flying {
+  background-color: #a98ff3;
+}
+#Psychic {
+  background-color: #f95587;
+}
+#Bug {
+  background-color: #a6b91a;
+}
+#Rock {
+  background-color: #b6a136;
+}
+#Ghost {
+  background-color: #735797;
+}
+#Dragon {
+  background-color: #6f35fc;
+}
+#Dark {
+  background-color: #705746;
+}
+#Steel {
+  background-color: #b7b7ce;
+}
+#Fairy {
+  background-color: #d685ad;
+}
+
 /* mobile style */
 @media (max-width: 325px) {
   .nav-bar-back {
     background-color: transparent;
     height: 60px;
     position: static;
+    display: flex;
+    justify-content: center;
   }
 
   .logo-img {
@@ -335,30 +400,47 @@
 
   .search-part-size {
     margin-left: 25px;
-    gap: 10px;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .input-search {
     height: 22px;
+    width: 70%;
   }
 
   .button-search {
     height: 22px;
+    z-index: 1;
+    width: 25%;
+    font-size: 12px;
   }
 
-  .pokemon {
-    width: 180px;
+  .grid {
+    gap: 15px;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .card {
+    width: 170px;
     height: 200px;
   }
 
-  .poke-img {
-    width: 85px;
-    height: 80px;
-    margin: 35px;
+  .image {
+    width: 95px;
+    height: 95px;
+    margin: 20px;
   }
 
-  .poke-id {
+  .id {
     margin-right: 110px;
+  }
+
+  .name {
+    font-size: 18px;
   }
 
   .load-button {
@@ -368,6 +450,7 @@
   .modal-content {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .modal-poke-id {
@@ -415,6 +498,14 @@
 
   .description {
     width: 90%;
+    text-align: center;
+  }
+
+  .description-container {
+    align-items: center;
+  }
+
+  .description-title {
     text-align: center;
   }
 
