@@ -4,8 +4,6 @@ import data from "./pokedex.json" assert { type: "json" };
 
 //get from storage
 const entries = Object.entries(localStorage);
-console.log(entries);
-console.log(entries[1][1]);
 for (let i = 0; i < entries.length; i++) {
     let idElement = entries[i][1];
     console.log(idElement);

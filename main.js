@@ -192,12 +192,15 @@ function createModal(idElem) {
   favoriteButton.className = "heart-button";
   modalContent[0].appendChild(favoriteButton); 
 
-  let indicate = 'empty';
   favoriteButton.addEventListener("click", changeHeart);
+  // favoriteButton.addEventListener('mouseover', () => favoriteButton.src = "./assets/fill-heart.png")
+  // favoriteButton.addEventListener('mouseout', () => favoriteButton.src = "./assets/fill-heart-2.png")
+  
   // change heart button
+  let indicate = 'empty';
   function changeHeart() {
     if (indicate == 'empty') { 
-      favoriteButton.src = "./assets/fill-heart.png";
+      favoriteButton.src = "./assets/fill-heart-2.png";
       indicate = 'fill';
       localStorage.setItem(`${data[idElem]["name"]["english"]}` ,`${data[idElem]["id"]}`)
     } else if (indicate == 'fill') {
@@ -206,6 +209,14 @@ function createModal(idElem) {
       localStorage.removeItem(`${data[idElem]["name"]["english"]}`)
     };
   }
+  //when you favorite pokemon - keep the heart full
+  const entries = Object.entries(localStorage);
+  for (let i = 0; i < entries.length; i++) {
+      if ( `${data[idElem]["id"]}` === entries[i][1]) {
+        indicate = 'fill';
+        favoriteButton.src = "./assets/fill-heart-2.png";
+  }
+     }
 }
 
 //Get modal elem
@@ -261,17 +272,3 @@ favoriteBtn.addEventListener("click", favoritePage);
 function favoritePage() {
   window.open("http://127.0.0.1:5500/favorite.html", "_self");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

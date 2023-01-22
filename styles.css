@@ -114,10 +114,6 @@
   width: 470px;
 }
 
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
 .card {
   height: 135px;
   width: 105px;
